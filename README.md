@@ -1,4 +1,4 @@
-# eyetracking_app_robot_manipulator
+# Eyetracking App for Robot Arm Manipulation
 
 # catkin_ws
 pasta catkin_ws só para salvar um cópia de garantia
