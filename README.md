@@ -9,9 +9,12 @@ instalação:
 - Darknet/YOLO : https://github.com/leggedrobotics/darknet_ros
 
 Rodar gazebo:
+
  roslaunch panda_gazebo panda_world.launch start_moveit:=false
+ 
  roslaunch panda_sim_moveit sim_move_group.launch
  
 Rodar YOLO:
+
  roslaunch darknet_ros darknet_ros.launch image:=/camera/image_raw
 
