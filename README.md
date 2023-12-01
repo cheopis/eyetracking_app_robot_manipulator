@@ -4,7 +4,7 @@ instalação:
 - ROS Noetic: http://wiki.ros.org/noetic/Installation/Ubuntu
 - RTGene: https://github.com/Tobias-Fischer/rt_gene
 - moveit: sudo apt install ros-melodic-moveit
-- panda Melodic: https://github.com/justagist/panda_simulator (seguir tutorial melodic-devel)
+- panda Noetic: https://github.com/justagist/panda_simulator (seguir tutorial melodic-devel)
 [pip install numpy-quaternion future argparse]
 - Darknet/YOLO : https://github.com/leggedrobotics/darknet_ros
 
