@@ -1,8 +1,5 @@
 # Eyetracking App for Robot Arm Manipulation
 
-# catkin_ws
-pasta catkin_ws só para salvar um cópia de garantia
-
 instalação:
 - ROS Noetic: http://wiki.ros.org/noetic/Installation/Ubuntu
 - RTGene: https://github.com/Tobias-Fischer/rt_gene
