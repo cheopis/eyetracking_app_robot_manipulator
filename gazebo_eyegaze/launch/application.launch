@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="file_name" default= "main.py"/>
+  
+  <arg name="enable_gazebo" default= "True"/>
+  
+  <arg name="enable_yolo" default= "True"/>
+  <arg name="image" default= "/camera/image_raw"/>
+  
+  
+  <group if="$(eval arg('enable_gazebo') == true)">
+    <include file="$(find panda_moveit_config)/launch/demo_gazebo.launch" />
+  </group>
+  
+  <group if="$(eval arg('enable_yolo') == true)">
+    <include file="$(find darknet_ros)/launch/yolo_v3.launch" >
+      <arg name="image" value="$(arg image)" />
+    </include>
+  </group>
+
+  <node pkg="gazebo_eyegaze" type="$(arg file_name)" name="aplication" output="screen"/>
+  
+</launch>

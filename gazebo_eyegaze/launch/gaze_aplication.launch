@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+  
+  <arg name="enable_rt_gene" default= "True"/>
+  <arg name="start_rviz" default="True" />
+  <arg name="blink" default= "True"/>
+
+  <group if="$(eval arg('enable_rt_gene') == true)">
+    <include file="$(find rt_gene)/launch/start_webcam.launch" />  
+    <include file="$(find rt_gene)/launch/estimate_gaze.launch" >
+      <arg name="start_rviz" value="$(arg start_rviz)" /> </include>
+    
+    <group if="$(eval arg('blink') == true)">
+      <include file="$(find rt_gene)/launch/estimate_blink.launch" />
+    </group>   
+  </group>
+  
+</launch>
+

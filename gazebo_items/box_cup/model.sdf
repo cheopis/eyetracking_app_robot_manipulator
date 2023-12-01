@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="box_cup">
+    <link name="box_cup_link">
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.166667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.166667</iyy>
+          <iyz>0</iyz>
+          <izz>0.166667</izz>
+        </inertia>
+      </inertial>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+      <collision name="box_cup_collision">
+        <geometry>
+          <box>
+            <size>0.12 0.12 0.12</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="box_cup_visual">
+        <geometry>
+          <box>
+            <size>0.12 0.12 0.12</size>
+          </box>
+        </geometry>
+	<material>
+	  <script>
+            <uri>model://cup_box/materials/scripts</uri>
+	    <uri>model://cup_box/materials/textures</uri>
+	    <name>cup_box</name>
+          </script>
+	</material>
+      </visual>
+      <collision name="box_holder">
+        <pose>-0.06 0.0 0.00 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.08 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="box_holder">
+        <pose>-0.06 0.0 0.00 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.08 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <static>0</static>
+  </model>
+</sdf>
